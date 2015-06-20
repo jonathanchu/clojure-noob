@@ -128,3 +128,38 @@
 
 ;; when should you use a list and when should you use a vector?
 ;; for now, probably better off just using vectors
+
+;; sets
+;; sets are collections of unique values
+
+;; literal notation
+#{"hannah montanna" "miley cyrus" 20 45}
+
+;; if you try to add :b to a set which already has :b, the set will still only have one :b
+(conj #{:a :b} :b)
+
+;; list
+(conj '(:a :b) :b)
+;; vector
+(conj [:a :b] :b)
+
+;; you can check whether a value exists in a set
+(get #{:a :b} :a)
+
+(:a #{:a :b})
+
+;; returns nil
+(get #{:a :b} "hannah montanna")
+
+;; you can create sets from existing vectors and lists by using the set function.
+;; one unobvious use for this is to check whether an element exists in a collection
+
+(set [3 3 3 4 4])
+
+(get (set [3 3 3 4 4]) 3)
+
+(get (set [3 3 3 4 4]) 5)
+
+(hash-set 1 1 3 1 2)
+
+(sorted-set :b :a :c)
