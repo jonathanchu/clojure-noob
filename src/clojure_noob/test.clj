@@ -107,3 +107,24 @@
 ;; elements get added to the end of a vector
 (conj [1 2 3] 4)
 (conj [1 2 3] 4 5)
+
+;; lists
+;; lists are similar to vectors in that they are linear collections of values.
+;; one difference though, you cannot retrieve list elements with `get`
+
+'(1 2 3 4)
+
+;; doesn't work for lists
+(get '(100 200 300 400) 0)
+
+;; this works but we'll find out later
+(nth '(100 200 300 400) 3)
+
+;; you can create a list with the `list` function
+(list 1 2 3 4)
+
+;; elements get added to the beginning of the list
+(conj '(1 2 3) 4)
+
+;; when should you use a list and when should you use a vector?
+;; for now, probably better off just using vectors
