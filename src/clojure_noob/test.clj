@@ -90,4 +90,20 @@
 
 (hash-map :a 1 :b 2)
 
-;; vectors
+;; vectors (0-indexed collection, like an array)
+
+;; vector literal
+[3 2 1]
+
+;; return an element of a vector
+(get [3 2 1] 0)
+
+;; another example of getting by index
+;; vector elements can be of any type and you can mix and match
+(get ["a" {:name "Pugsley Winterbottom"} "c"] 1)
+
+(vector "creepy" "full" "moon")
+
+;; elements get added to the end of a vector
+(conj [1 2 3] 4)
+(conj [1 2 3] 4 5)
