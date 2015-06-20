@@ -2,7 +2,7 @@
   "abra cadabra"
   "hocus pocus")
 
-(if true
+(if false
   (do (println "Success!")
       "abra cadabra")
   (do (println "Failure :(")
@@ -22,7 +22,7 @@
    "Doreen The Explorer"
    "The Incredible Bulk"])
 
-;; nameing things with def
+;; naming things with def
 ;; we bind the name `failed-protagonist-names' to a vector containing three strings
 
 (nil? 1)
@@ -70,4 +70,24 @@
 
 ({:name "The Human Coffee Pot"} :name)
 
+;; get and get-in for nested values
+
 ;; 2.5
+
+:a
+:rumplestiltskin
+:34
+:_?
+
+;; keywords can be used as functions to look up corresponding value in a data structure
+(:a {:a 1 :b 2 :c 3})
+
+;; this is equivalent to
+(get {:a 1 :b 2 :c 3} :a)
+
+;; provide a default value
+(:d {:a 1 :b 2 :c 3} "FAERIES")
+
+(hash-map :a 1 :b 2)
+
+;; vectors
