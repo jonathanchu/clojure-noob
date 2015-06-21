@@ -166,5 +166,6 @@
 (hash-set 1 1 3 1 2)
 
 (sorted-set :b :a :c)
+(sorted-set :b :a :c :b)
 
 ;; symbols and naming
