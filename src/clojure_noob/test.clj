@@ -43,6 +43,7 @@
 
 (def name "Chewbacca")
 (str "\"Ugglglglglglglglglglglll\" - " name)
+(str "Ugglglglglglglglglglglll - " name)
 
 ;; an empty map
 {}
@@ -55,6 +56,7 @@
 {"string-key" +}
 
 {:name {:first "John" :middle "Jacob" :last "Jingleheimerschmidt"}}
+(get-in {:name {:first "John" :middle "Jacob" :last "Jingleheimerschmidt"}} [:name :last])
 
 (get {:a 0 :b 1} :b)
 (get {:a 0 :b {:c "ho hum"}} :b)
@@ -107,6 +109,7 @@
 ;; elements get added to the end of a vector
 (conj [1 2 3] 4)
 (conj [1 2 3] 4 5)
+(conj [1 2 3] 5 4)
 
 ;; lists
 ;; lists are similar to vectors in that they are linear collections of values.
@@ -139,9 +142,9 @@
 (conj #{:a :b} :b)
 
 ;; list
-(conj '(:a :b) :b)
+(conj '(:a :b) :c)
 ;; vector
-(conj [:a :b] :b)
+(conj [:a :b] :c)
 
 ;; you can check whether a value exists in a set
 (get #{:a :b} :a)
