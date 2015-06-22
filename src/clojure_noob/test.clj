@@ -169,3 +169,9 @@
 (sorted-set :b :a :c :b)
 
 ;; symbols and naming
+(def failed-movie-titles
+  ["Gone With the Moving Air" "Swellfellas"])
+
+;; def associates the value ["Gone With the Moving Air" "Swellfellas"] with the symbol failed-movie-titles
+
+(identity 'test)
